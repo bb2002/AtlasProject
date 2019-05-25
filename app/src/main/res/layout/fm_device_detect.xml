@@ -1,12 +1,185 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<android.support.constraint.ConstraintLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#ffffff">
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+        android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="#03A9F4">
+
+
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/device_id"
-            android:text="loading"/>
-</RelativeLayout>
+            android:text="POKEMON"
+            android:textSize="29dp"
+            android:textStyle="bold"
+            android:gravity="left"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.01"
+            android:textColor="#FFE7E7"
+            android:fontFamily="sans-serif"
+            app:layout_constraintHorizontal_bias="0.941"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="POKEMON"
+            android:textSize="29dp"
+            android:textStyle="bold"
+            android:gravity="left"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.01"
+            android:textColor="#FFE7E7"
+            android:fontFamily="sans-serif"
+            app:layout_constraintHorizontal_bias="0.941"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="기업명"
+            android:textSize="29dp"
+            android:textStyle="bold"
+            android:gravity="left"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.199"
+            android:textColor="#FFE7E7"
+            android:fontFamily="sans-serif"
+            app:layout_constraintHorizontal_bias="0.256"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="폐기물명"
+            android:textSize="25dp"
+            android:gravity="left"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.352"
+            android:textColor="#FFE7E7"
+            android:fontFamily="sans-serif"
+            app:layout_constraintHorizontal_bias="0.267"/>
+
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="처리비용"
+            android:textSize="29dp"
+            android:textStyle="bold"
+            android:gravity="left"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColor="#FFE7E7"
+            android:fontFamily="sans-serif"
+            app:layout_constraintHorizontal_bias="0.28"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="삼성"
+            android:id="@+id/company_id"
+            android:textSize="35dp"
+            android:gravity="left"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.269"
+            android:textColor="#ECECEC"
+            android:fontFamily="sans-serif"
+            app:layout_constraintHorizontal_bias="0.369"/>
+
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="우라늄"
+            android:id="@+id/trash_id"
+            android:textSize="35dp"
+            android:gravity="left"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.421"
+            android:textColor="#ECECEC"
+            android:fontFamily="sans-serif"
+            app:layout_constraintHorizontal_bias="0.407"/>
+
+
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.578">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="129만 3000원"
+                android:id="@+id/coin_id"
+                android:textSize="35dp"
+                android:gravity="left"
+                android:textColor="#ECECEC"
+                android:fontFamily="sans-serif"
+                app:layout_constraintHorizontal_bias="0.642"/>
+        <Button
+                android:id="@+id/pay_button"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="지불"
+                android:textSize="14sp"
+                android:background="#03A9F4"
+                android:textColor="#ffffff"
+                android:textStyle="bold"/>
+    </LinearLayout>
+
+
+    <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/bar"
+            android:layout_width="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.854"
+            android:layout_height="180dp"
+            app:layout_constraintHorizontal_bias="0.0">
+    </com.github.mikephil.charting.charts.BarChart>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:background="#FFF"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            android:layout_height="72dp"
+            app:layout_constraintHorizontal_bias="1.0">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="기기UUID: 000xd:"
+                android:textSize="16sp"
+                android:id="@+id/device_id"
+                android:textColor="#03A9F4"
+                android:layout_margin="16dp"/>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

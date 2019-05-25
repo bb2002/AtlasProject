@@ -14,10 +14,14 @@ class BillingActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_billing)
 
-        test.setOnClickListener {
-            v ->
+        retry.setOnClickListener {
             IntentIntegrator(this).initiateScan()
         }
+    }
+
+    override fun onStart() {
+        super.onStart()
+        IntentIntegrator(this).initiateScan()
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

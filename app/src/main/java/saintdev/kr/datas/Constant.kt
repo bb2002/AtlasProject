@@ -14,4 +14,8 @@ object Trust {
     fun getTrust2() : TrustData {
         return TrustData("74278BDA-B644-4520-8F0C-720EAF059935", "충북 음성군 삼성면 금일로 955-25 삼성 바이오 음성공장", "Na (나트륨)", 99686760)
     }
+
+    fun getTrust3() : TrustData {
+        return TrustData("undefined", "undefined", "undefined", -1)
+    }
 }
