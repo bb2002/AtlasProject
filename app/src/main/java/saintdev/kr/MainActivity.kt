@@ -70,6 +70,7 @@ class MainActivity : AppCompatActivity(), BeaconConsumer {
         beaconManager.addRangeNotifier { beacons, _ ->
             if (beacons.isNotEmpty()) { onBeaconDetected(beacons.iterator().next().id1.toString())
                 this.beaconManager.unbind(this)
+                this.beaconManager.removeAllRangeNotifiers()
             }
         }
 
@@ -83,5 +84,6 @@ class MainActivity : AppCompatActivity(), BeaconConsumer {
     override fun onDestroy() {
         super.onDestroy()
         this.beaconManager.unbind(this)
+        this.beaconManager.removeAllRangeNotifiers()
     }
 }
